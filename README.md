@@ -1,0 +1,2 @@
+# Automat
+# Autor: Bob Čermák
