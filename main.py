@@ -1,5 +1,7 @@
 
 import time
+
+badPrize = "5"
  
  
 while True:
@@ -14,26 +16,28 @@ while True:
     if produkt == "":
         print("Produkt nebyl vybrán")
         time.sleep(1)
- 
-    elif produkt in ["a", "b" , "c" , "d"]:
-        print("Zadal jste špatný prvek")
-       
- 
+
     elif type(produkt) == str:
         if produkt == "1":
             print("Váš produkt je Kola, poprosim vas o 30kc")
+            break
  
-        if produkt == "2":
+        elif produkt == "2":
             print("Váš produkt je Jahoda Juice, poprosim vas o 40kc")
+            break
  
-        if produkt == "3":
+        elif produkt == "3":
             print("Váš produkt je pomeranc.Juice, poprosim vas o 30kc")
+            break
  
-        if produkt == "4":
-            print("Váš produkt je fanta, poprosim vas o 500kc")
-       
-        print("Poprosím vhoďte peníze")
-        break
+        elif produkt == "4":
+            print("Váš produkt je fanta, poprosim vas o 50kc")
+            break
+    
+        elif produkt != ("1","2","3","4"):
+            print("Zadal jste špatný prvek")
+
+        
        
      
    
