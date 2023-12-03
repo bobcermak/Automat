@@ -11,6 +11,7 @@ fanta = "50"
             
 
 
+
  
  
 while True:
@@ -127,6 +128,11 @@ while True:
         elif produkt != ("1","2","3","4"):
             print("Zadal jste špatný prvek")
             time.sleep(1)
+
+
+
+while False:
+    print("Automat mimo provoz!!!")
 
             
     
