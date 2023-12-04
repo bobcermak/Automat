@@ -9,8 +9,9 @@ kola = "30"
 jahoda = "40"
 pomeranc = "30"
 fanta = "50"
+            
 
-timer = 0
+
 
             
  
@@ -38,23 +39,9 @@ while True:
             elif ikola < kola:
                 negrko = int(kola) - int(ikola)
                 innegrko = input("Chybí vám ještě " + str(negrko) + " Kč: ")
-                if str(negrko) == str(innegrko):
-                    print("Vaše částka je dostačující")
-                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                    break
-                elif str(innegrko) != str(negrko):
-                    aut = int(negrko) - int(innegrko)
-                    najme = input("Vaše částka je nedostatečná, ještě přidejte " + str(aut) + " Kč: ")
-                    if str(aut) != str(najme):                                                          #pokud nfunguje if/elif/else = zkusit dat do sebe
-                        print("Váš nákup proběhl neúspěšně")
-                        print("Zde máte vámi vhozené peníze, přeji hezký zbytek dne :)")
-                        break
-                    elif str(aut) == str(najme):
-                        print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                        break
-                    
-                    
-                
+                print("Vhodil jste " + str(innegrko) +" Kč")
+                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                break
             elif ikola == kola:
                 print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")  #VZDY DAVAT IF do sebe (nesmí přečahovat)
                 break
@@ -183,7 +170,7 @@ while True:
         elif produkt != ("1","2","3","4"):
             print("Zadal jste špatný prvek")
             time.sleep(1)
-            
+
 
 
 while False:
