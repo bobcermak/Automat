@@ -3,16 +3,16 @@
 
 import time
 
+
 badPrize = "5"
 kola = "30"
 jahoda = "40"
 pomeranc = "30"
 fanta = "50"
+
+timer = 0
+
             
-
-
-
- 
  
 while True:
     print("Vyber si produkt: ")
@@ -38,9 +38,23 @@ while True:
             elif ikola < kola:
                 negrko = int(kola) - int(ikola)
                 innegrko = input("Chybí vám ještě " + str(negrko) + " Kč: ")
-                print("Vhodil jste " + str(innegrko) +" Kč")
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                break
+                if str(negrko) == str(innegrko):
+                    print("Vaše částka je dostačující")
+                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                    break
+                elif str(innegrko) != str(negrko):
+                    aut = int(negrko) - int(innegrko)
+                    najme = input("Vaše částka je nedostatečná, ještě přidejte " + str(aut) + " Kč: ")
+                    if str(aut) != str(najme):                                                          #pokud nfunguje if/elif/else = zkusit dat do sebe
+                        print("Váš nákup proběhl neúspěšně")
+                        print("Zde máte vámi vhozené peníze, přeji hezký zbytek dne :)")
+                        break
+                    elif str(aut) == str(najme):
+                        print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                        break
+                    
+                    
+                
             elif ikola == kola:
                 print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")  #VZDY DAVAT IF do sebe (nesmí přečahovat)
                 break
@@ -60,11 +74,25 @@ while True:
             elif ijahod < jahoda:
                 negrkeo = int(jahoda) - int(ijahod)
                 innegrkeo = input("Chybí vám ještě " + str(negrkeo) + " Kč: ")
-                print("Vhodil jste " + str(innegrkeo) +" Kč")
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                break
+                if str(negrkeo) == str(innegrkeo):
+                    print("Vaše částka je dostačující")
+                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                    break
+                elif str(innegrkeo) != str(negrkeo):
+                    auto = int(negrkeo) - int(innegrkeo)
+                    najmen = input("Vaše částka je nedostatečná, ještě přidejte " + str(auto) + " Kč: ")
+                    if str(auto) != str(najmen):                                                          #pokud nfunguje if/elif/else = zkusit dat do sebe
+                        print("Váš nákup proběhl neúspěšně")
+                        print("Zde máte vámi vhozené peníze, přeji hezký zbytek dne :)")
+                        break
+                    elif str(auto) == str(najmen):
+                        print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                        break
+                    
+                    
+                
             elif ijahod == jahoda:
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")  #VZDY DAVAT IF do sebe (nesmí přečahovat)
                 break
  
 
@@ -84,13 +112,26 @@ while True:
             elif ipomeranc < pomeranc:
                 negrkpo = int(pomeranc) - int(ipomeranc)
                 innegrkpo = input("Chybí vám ještě " + str(negrkpo) + " Kč: ")
-                print("Vhodil jste " + str(innegrkpo) +" Kč")
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                break
+                if str(negrkpo) == str(innegrkpo):
+                    print("Vaše částka je dostačující")
+                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                    break
+                elif str(innegrkpo) != str(negrkpo):
+                    autos = int(negrkpo) - int(innegrkpo)
+                    najmeno = input("Vaše částka je nedostatečná, ještě přidejte " + str(autos) + " Kč: ")
+                    if str(autos) != str(najmeno):                                                          #pokud nfunguje if/elif/else = zkusit dat do sebe
+                        print("Váš nákup proběhl neúspěšně")
+                        print("Zde máte vámi vhozené peníze, přeji hezký zbytek dne :)")
+                        break
+                    elif str(autos) == str(najmeno):
+                        print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                        break
+                    
+                    
+                
             elif ipomeranc == pomeranc:
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")  #VZDY DAVAT IF do sebe (nesmí přečahovat)
                 break
-            
             
  
 
@@ -108,11 +149,25 @@ while True:
             elif ifanta < fanta:
                 negrkfo = int(fanta) - int(ifanta)
                 innegrfo = input("Chybí vám ještě " + str(negrkfo) + " Kč: ")
-                print("Vhodil jste " + str(innegrfo) +" Kč")
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                break
+                if str(negrkfo) == str(innegrfo):
+                    print("Vaše částka je dostačující")
+                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                    break
+                elif str(innegrfo) != str(negrkfo):
+                    autosi = int(negrkfo) - int(innegrfo)
+                    najmenos = input("Vaše částka je nedostatečná, ještě přidejte " + str(autosi) + " Kč: ")
+                    if str(autosi) != str(najmenos):                                                          #pokud nfunguje if/elif/else = zkusit dat do sebe
+                        print("Váš nákup proběhl neúspěšně")
+                        print("Zde máte vámi vhozené peníze, přeji hezký zbytek dne :)")
+                        break
+                    elif str(autosi) == str(najmenos):
+                        print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                        break
+                    
+                    
+                
             elif ifanta == fanta:
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")  #VZDY DAVAT IF do sebe (nesmí přečahovat)
                 break
             
 
@@ -128,7 +183,7 @@ while True:
         elif produkt != ("1","2","3","4"):
             print("Zadal jste špatný prvek")
             time.sleep(1)
-
+            
 
 
 while False:
