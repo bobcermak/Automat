@@ -3,11 +3,15 @@
 
 import time
 
+
 badPrize = "5"
 kola = "30"
 jahoda = "40"
 pomeranc = "30"
 fanta = "50"
+
+timer = 0
+
             
 
 
@@ -38,9 +42,21 @@ while True:
             elif ikola < kola:
                 negrko = int(kola) - int(ikola)
                 innegrko = input("Chybí vám ještě " + str(negrko) + " Kč: ")
-                print("Vhodil jste " + str(innegrko) +" Kč")
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                break
+                if negrko == innegrko:
+                    print("Vaše částka je dostačující")
+                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                    break
+                elif innegrko != negrko:
+                    aut = int(negrko) - int(innegrko)
+                    najme = input("Vaše částka je nedostatečná ještě přidejte " + str(aut) + " Kč: ")
+                elif najme != innegrko:
+                    print("Váš nákup neproběhl úspěšně")
+                    print("Zde máte vámi vhozené peníze, přeji hezký zbytek dne :)")
+                elif najme == innegrko:
+                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                    break
+                    
+                
             elif ikola == kola:
                 print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")  #VZDY DAVAT IF do sebe (nesmí přečahovat)
                 break
@@ -128,7 +144,10 @@ while True:
         elif produkt != ("1","2","3","4"):
             print("Zadal jste špatný prvek")
             time.sleep(1)
-
+            
+        
+        elif timer(3) >= ikola:
+            print("Překročil jste časový limit, vracíme vám vámi hozenou částku")
 
 
 while False:
