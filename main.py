@@ -39,9 +39,20 @@ while True:
             elif ikola < kola:
                 negrko = int(kola) - int(ikola)
                 innegrko = input("Chybí vám ještě " + str(negrko) + " Kč: ")
-                print("Vhodil jste " + str(innegrko) +" Kč")
-                print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
-                break
+                if str(negrko) == str(innegrko):
+                    print("Vaše částka je dostačující")
+                    print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                    break
+                elif str(innegrko) != str(negrko):
+                    aut = int(negrko) - int(innegrko)
+                    najm = input("Vaše částka je nedostatečná, ještě přidejte " + str(aut) + " Kč: ")
+                    if str(aut) != str(najm):                                                          #pokud nfunguje if/elif/else = zkusit dat do sebe
+                        print("Váš nákup proběhl neúspěšně")
+                        print("Zde máte vámi vhozené peníze, přeji hezký zbytek dne :)")
+                        break
+                    elif str(aut) == str(najm):
+                        print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")
+                        break
             elif ikola == kola:
                 print("Vaše objednávka je potvrzena, přeji hezký zbytek dne :)")  #VZDY DAVAT IF do sebe (nesmí přečahovat)
                 break
